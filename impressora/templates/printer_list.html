@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de impressoras</title>
+</head>
+    <body>
+
+        <h1>Gestão Campello IT</h1>
+
+        <table border="1">
+
+            <th>Serial</th><th>Contador</th><th>Local</th><th>IP</th>
+
+                {% for printer in printer %}
+                <tr>
+                    <td><a href="{% url 'atualizar' printer.serial %}">{{ printer.serial }}</a></td></td>
+                    <td>{{ printer.contador }}</td>
+                    <td >GP: {{ printer.galpao }} - Col.{{ printer.coluna }}</td>
+                    <td>{{ printer.ip }}</td>
+                    <td><a href="{% url 'deletar' printer.serial %}">Deletar</a></td>
+                    <!- Exibe as impressoras cadastradas no banco pelo serial -!>
+
+                </tr>
+                {% endfor %}
+         </table>
+        <br>
+        <a href="{% url 'novaPrinter' %}">CADASTRAR NOVO EQUIPAMENTO</a>
+        <br><br><a href="/">Home</a>
+
+    </body>
+</html>

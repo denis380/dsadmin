@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ddf8271-5cce-4788-9221-be2a4bb6dce3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2005039081">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="19" />
+          <entry key="py" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="19" />
+          <entry key="Python" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="756" />
+          <entry key="py" value="920" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="756" />
+          <entry key="Python" value="920" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/impressora/urls.py" />
+        <option value="$PROJECT_DIR$/../../../projetoTeste/proj01/proj01/urls.py" />
+        <option value="$PROJECT_DIR$/impressora/templates/login.html" />
+        <option value="$PROJECT_DIR$/impressora/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/impressora/views.py" />
+        <option value="$PROJECT_DIR$/ds_manager/urls.py" />
+        <option value="$PROJECT_DIR$/impressora/templates/busca_rede.html" />
+        <option value="$PROJECT_DIR$/impressora/templates/deletar_printer.html" />
+        <option value="$PROJECT_DIR$/impressora/templates/erros.html" />
+        <option value="$PROJECT_DIR$/impressora/templates/info.html" />
+        <option value="$PROJECT_DIR$/impressora/templates/index.html" />
+        <option value="$PROJECT_DIR$/impressora/tests.py" />
+        <option value="$PROJECT_DIR$/ds_manager/settings.py" />
+        <option value="$PROJECT_DIR$/impressora/templates/nova_printer.html" />
+        <option value="$PROJECT_DIR$/impressora/templates/printer_list.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="285" />
+    <option name="y" value="170" />
+    <option name="width" value="1239" />
+    <option name="height" value="830" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ds_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ds_manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ds_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ds_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="ds_manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ds_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ds_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="impressora" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ddf8271-5cce-4788-9221-be2a4bb6dce3" name="Default Changelist" comment="" />
+      <created>1555633518048</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555633518048</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14210178" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../../projetoTeste/proj01/clientes/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../projetoTeste/proj01/proj01/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/impressora/templates/login.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/home.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/erros.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/deletar_printer.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/busca_rede.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/registration/login.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/admin/base_site.html" />
+    <entry file="file://$PROJECT_DIR$/ds_manager/urls.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/apps.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/urls.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/views.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/tests.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/nova_printer.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/info.html" />
+    <entry file="file://$PROJECT_DIR$/impressora/forms.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/models.py" />
+    <entry file="file://$PROJECT_DIR$/impressora/templates/printer_list.html" />
+    <entry file="file://$PROJECT_DIR$/ds_manager/settings.py" />
+  </component>
+</project>
