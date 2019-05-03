@@ -20,7 +20,7 @@ def novaPrinter(request): # Cadastra uma nova impressora.
 
 @login_required
 def consultaPrinter(request):#pega todos as impressoras listadas no banco de dados.
-    printer = Printer.objects.all()
+    printer = Printer.objects.all().order_by('coluna')
     return render(request, 'printer_list.html', {'printer': printer})
 
 @login_required
@@ -122,6 +122,7 @@ def deletar(request, id): # Deleta o equipamento no banco de dados.
 def inicio(request):
     return render(request, 'index.html')
 
+@login_required
 def buscaPorColuna(request):# Busca a impressora pela coluna ou lista as colunas correspondentes.
     if request.method == 'POST':
         form = Busca_Coluna(request.POST or None)
@@ -130,13 +131,12 @@ def buscaPorColuna(request):# Busca a impressora pela coluna ou lista as colunas
         else:
             return HttpResponse('Referência invlálida!')
 
-
     coluna = str(col).upper()
-
 
     try:
         printer = Printer.objects.filter(coluna=coluna).order_by('ip').first()
         ip = printer.ip
+        test = requests.get('http://'+ ip)
         return redirect('http://'+ ip)
     except AttributeError:
         printerList = Printer.objects.filter(coluna__contains=(coluna))
@@ -147,7 +147,9 @@ def buscaPorColuna(request):# Busca a impressora pela coluna ou lista as colunas
         else:
 
             return render(request, 'lista_colunas.html', {'printerList': printerList})
-
+    except ConnectionError:
+        erro = "A impressora está Offline."
+        return render(request, 'erros.html', {'erro': erro})
 
 
 

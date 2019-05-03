@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    
+    
+    <title>Meu APP</title>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color : #000045; margin-bottom: 0%">
+            <a class="navbar-brand" href="#"><h1>Gestão Campello IT</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <h5><a class="nav-link" href="/printers/novo/">NOVO</a></h5>
+                </li>
+                <li class="nav-item">
+                    <h5><a class="nav-link" href="/printers/lista/">LISTA CADASTRADOS</a></h5>
+                </li>
+                        <li class="nav-item">
+                    <h5><a class="nav-link" href="/printers/consulta/">CONSULTAS</a></h5>
+                </li>
+
+
+                </ul>
+
+                {% if user.is_authenticated %}
+                    <div class="nav-link">
+                        <a class="nav-link" href="#">Olá {{ user.username }}</a>
+                    </div>
+
+                     <div class="nav-link">
+                    <a href="/logout/">Logout</a>
+                    </div>
+
+                {% else %}
+                    <div class="nav-link">
+                    <a href="/login/">Login</a>
+                    </div>
+                {% endif %}
+
+
+               
+
+
+            </div>
+        </nav>
+    
+
+
+    <div class="container">
+    {% block content %}
+    {% endblock %}
+    </div> 
+
+</body>
+</html>
