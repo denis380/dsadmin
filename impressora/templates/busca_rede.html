@@ -2,7 +2,7 @@
 
   {% block content %}
   
-    <div>
+    <div id="container-central">
         <form  method="post" action="/printers/info/">
             {% csrf_token %}
             {{ form }}
@@ -10,7 +10,7 @@
         </form>
     </div>
     <br>
-    <div>
+    <div id="container-central">
         <form  method="post" action="/printers/infolocal/">
             {% csrf_token %}
             {{ form2 }}

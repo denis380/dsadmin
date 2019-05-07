@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="padding-bottom: 15px; padding-top: 15px;">Para atualizar a tabela de impressoras carregue o arquivo .CSV</h2>
+<div class="container">
+    <form action="/printers/csv/" method="POST">
+        {% csrf_token %}
+        <div class="input-group">
+        <input type="file" class="btn btn-outline-dark" id="arquivo">
+        <button type="submit" class="btn btn-outline-dark">Enviar</button>
+        </div>
+      </form>
+</div>
+{% endblock %}

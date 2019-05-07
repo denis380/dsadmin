@@ -4,7 +4,7 @@
 
     <table border="1" class="table">
         <thead class="thead-dark">
-        <th>Serial</th><th>Contador</th><th>Local</th><th>IP</th><th>-</th>
+        <th>Serial</th><th>Contador</th><th>Local</th><th>IP</th><th>Etiqueta</th><th>-</th>
 
             {% for printer in printer %}
             <tr>
@@ -12,6 +12,7 @@
                 <td>{{ printer.contador }}</td>
                 <td >GP: {{ printer.galpao }} - Col.{{ printer.coluna }}</td>
                 <td>{{ printer.ip }}</td>
+                <td>{{ printer.etiqueta }}</td>
                 <td><a href="{% url 'deletar' printer.serial %}">Deletar</a></td>
                 <!- Exibe as impressoras cadastradas no banco pelo serial -!>
 

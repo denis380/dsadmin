@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import requests
 from requests.exceptions import ConnectionError
 from django.contrib.auth.decorators import login_required
+from openpyxl import load_workbook
 
 
 
@@ -46,8 +47,9 @@ def buscaPorIp(request):# Pega o IP e retorna o serial e o contador da impressor
 
     serial = buscaSerial(ip)
     cont = buscaCont(ip)
+    test = buscaEtiqueta(ip)
     dados = {'serial': serial, 'cont': cont}
-
+    
     return render(request, 'info.html', dados)
 
 @login_required
@@ -68,46 +70,6 @@ def impRetorno(request, ip):
     contador = buscaCont(ip)
 
     return render(request, 'info.html', {'contador': contador}, {'serial': serial})
-
-def buscaCont(ip):
-
-    url = 'http://' + ip + '/cgi-bin/dynamic/printer/config/reports/deviceinfo.html'
-
-    page = requests.get(url)
-
-    soup = BeautifulSoup(page.text, 'lxml')
-
-    b = soup.find_all('p')  # Diminuindo o conteúdo de busca
-
-    stringSoup = str(b)  # Passando a busca para uma string
-
-    listResult = stringSoup.split()  # Cria uma lista a partir da String
-
-    indice = (listResult.index('pág.</p>,') + 3)  # Pega o indice correto do contador
-
-    cont = listResult[indice]
-
-    return cont
-
-def buscaSerial(ip):
-
-    url = 'http://' + ip + '/cgi-bin/dynamic/printer/config/reports/deviceinfo.html'
-
-    page = requests.get(url)
-
-    soup = BeautifulSoup(page.text, 'lxml')
-
-    b = soup.find_all('p')  # Diminuindo o conteúdo de busca
-
-    stringSoup = str(b)  # Passando a busca para uma string
-
-    listResult = stringSoup.split()  # Cria uma lista a partir da String
-
-    indice = (listResult.index('série</p>,') + 3)  # Pega o indice do Serial correto
-
-    serial = listResult[indice]
-
-    return serial
 
 @login_required
 def deletar(request, id): # Deleta o equipamento no banco de dados.
@@ -151,9 +113,76 @@ def buscaPorColuna(request):# Busca a impressora pela coluna ou lista as colunas
         erro = "A impressora está Offline."
         return render(request, 'erros.html', {'erro': erro})
 
+def buscaEtiqueta(ip): # Recebe o ip e retorna a Etiqueta cadastrada no Browser
+    url = 'http://' + ip + '/cgi-bin/dynamic/printer/config/gen/general.html'
 
+    page = requests.get(url)
 
+    soup = BeautifulSoup(page.text, 'lxml')
 
+    b = soup.find_all('input')  # Diminuindo o conteúdo de busca
+
+    stringSoup = str(b)  # Passando a busca para uma string
+    
+    if "ABR" in stringSoup:
+
+        indice = (stringSoup.index('ABR'))  # Pega o indice correto da etiqueta
+
+        end = indice + 15
+
+        etiqueta = stringSoup[indice:end]
+
+        return etiqueta
+    else:
+        etiqueta = None
+        return etiqueta
+
+def buscaSerial(ip):
+
+    url = 'http://' + ip + '/cgi-bin/dynamic/printer/config/reports/deviceinfo.html'
+
+    page = requests.get(url)
+
+    soup = BeautifulSoup(page.text, 'lxml')
+
+    b = soup.find_all('p')  # Diminuindo o conteúdo de busca
+
+    stringSoup = str(b)  # Passando a busca para uma string
+
+    listResult = stringSoup.split()  # Cria uma lista a partir da String
+
+    indice = (listResult.index('série</p>,') + 3)  # Pega o indice do Serial correto
+
+    serial = listResult[indice]
+
+    return serial
+
+def buscaCont(ip):
+
+    url = 'http://' + ip + '/cgi-bin/dynamic/printer/config/reports/deviceinfo.html'
+
+    page = requests.get(url)
+
+    soup = BeautifulSoup(page.text, 'lxml')
+
+    b = soup.find_all('p')  # Diminuindo o conteúdo de busca
+
+    stringSoup = str(b)  # Passando a busca para uma string
+
+    listResult = stringSoup.split()  # Cria uma lista a partir da String
+
+    indice = (listResult.index('pág.</p>,') + 3)  # Pega o indice correto do contador
+
+    cont = listResult[indice]
+
+    return cont
+
+def pegaArquivo(request):# Retorna o template upload_csv e pega o arquivo.
+    if request.method == 'POST':
+        tabela = load_workbook(request.POST)
+        
+
+    return render(request, 'upload_csv.html')
 
 
 

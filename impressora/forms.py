@@ -18,4 +18,6 @@ class Busca_Coluna(forms.Form):
 
     coluna = forms.CharField()
 
+class Upload_Csv(forms.Form):
 
+    arquivo = forms.FileInput()

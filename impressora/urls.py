@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import novaPrinter, consultaPrinter, consultaRede, buscaPorIp, atualizar, deletar, buscaPorColuna
+from .views import novaPrinter, consultaPrinter, consultaRede, buscaPorIp, atualizar, deletar, buscaPorColuna, pegaArquivo
 
 
 
@@ -13,5 +13,6 @@ urlpatterns = [
     path('infolocal/', buscaPorColuna, name='buscaPorColuna'),
     path('atualizar/<str:id>', atualizar,name='atualizar'),
     path('deletar/<str:id>', deletar, name='deletar'),
+    path('csv/', pegaArquivo, name='pegaArquivo'),
 
     ]

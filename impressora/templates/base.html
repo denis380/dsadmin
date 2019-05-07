@@ -6,14 +6,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/bootstrap.css">
     
     
     <title>Meu APP</title>
 </head>
 <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color : #000045; margin-bottom: 0%">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color : #000045; margin-bottom: 0%">
             <a class="navbar-brand" href="#"><h1>Gestão Campello IT</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,6 +29,10 @@
                 </li>
                         <li class="nav-item">
                     <h5><a class="nav-link" href="/printers/consulta/">CONSULTAS</a></h5>
+                </li>
+                </li>
+                        <li class="nav-item">
+                    <h5><a class="nav-link" href="/printers/csv/">UPDATE CSV</a></h5>
                 </li>
 
 
@@ -54,14 +58,16 @@
 
 
             </div>
-        </nav>
+    </nav>
+
+
+    </div>
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
     
 
-
-    <div class="container">
-    {% block content %}
-    {% endblock %}
-    </div> 
-
+   
 </body>
 </html>
