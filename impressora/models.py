@@ -2,7 +2,7 @@ from django.db import models
 from django import forms
 
 class Printer(models.Model):
-    serial = models.CharField(max_length=20)
+    serial = models.CharField(max_length=20, primary_key=True)
     ip = models.GenericIPAddressField()
     modelo = models.CharField(max_length=8)
     contador = models.IntegerField()
