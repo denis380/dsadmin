@@ -7,7 +7,7 @@ class Printer(models.Model):
     modelo = models.CharField(max_length=8)
     contador = models.IntegerField()
     etiqueta = models.CharField(max_length=15)
-    galpao = models.CharField(max_length=2)
+    galpao = models.CharField(max_length=3)
     coluna = models.CharField(max_length=20)
     status = models.CharField(max_length=30)
 
