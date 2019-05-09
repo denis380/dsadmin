@@ -7,6 +7,7 @@ import requests
 from requests.exceptions import ConnectionError
 from django.contrib.auth.decorators import login_required
 from openpyxl import load_workbook
+import csv
 
 
 
@@ -177,12 +178,30 @@ def buscaCont(ip):
 
     return cont
 
+@login_required
 def pegaArquivo(request):# Retorna o template upload_csv e pega o arquivo.
     if request.method == 'POST':
         tabela = load_workbook(request.POST)
         
 
     return render(request, 'upload_csv.html')
+
+@login_required
+def exportarCsv(request):# Exporta o .csv com as impressoras cadastradas no DB.
+    printers = Printer.objects.all()
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="Ativos_FCA.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['SERIAL', 'CONTADOR', 'GP', 'COLUNA', 'IP', 'ETIQUETA'])
+    for obj in printers:
+        writer.writerow([obj.serial, obj.contador, obj.galpao, obj.coluna, obj.ip, obj.etiqueta])
+
+    return response
+
+
+def homePrinters(request):
+     return render(request, 'home_printers.html')
 
 
 
