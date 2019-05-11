@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import Impressora, Busca_Rede, Busca_Coluna
+from .forms import Impressora, Busca_Rede, Busca_Coluna, Upload_Csv
 from .models import Printer
 from bs4 import BeautifulSoup
 import requests
@@ -8,6 +8,8 @@ from requests.exceptions import ConnectionError
 from django.contrib.auth.decorators import login_required
 from openpyxl import load_workbook
 import csv
+import pandas as pd
+import xlrd
 
 
 
@@ -178,13 +180,6 @@ def buscaCont(ip):
 
     return cont
 
-@login_required
-def pegaArquivo(request):# Retorna o template upload_csv e pega o arquivo.
-    if request.method == 'POST':
-        tabela = load_workbook(request.POST)
-        
-
-    return render(request, 'upload_csv.html')
 
 @login_required
 def exportarCsv(request):# Exporta o .csv com as impressoras cadastradas no DB.
@@ -202,10 +197,4 @@ def exportarCsv(request):# Exporta o .csv com as impressoras cadastradas no DB.
 
 def homePrinters(request):
      return render(request, 'home_printers.html')
-
-
-
-
-
-
 

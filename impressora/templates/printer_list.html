@@ -10,8 +10,8 @@
             <tr>
                 <td><a href="{% url 'atualizar' printer.serial %}">{{ printer.serial }}</a></td></td>
                 <td>{{ printer.contador }}</td>
-                <td >GP: {{ printer.galpao }} - Col.{{ printer.coluna }}</td>
-                <td>{{ printer.ip }}</td>
+                <td >{{ printer.galpao }} - Col.{{ printer.coluna }}</td>
+                <td><a href="//{{ printer.ip }}">{{ printer.ip }}</a></td>
                 <td>{{ printer.etiqueta }}</td>
                 <td><a href="{% url 'deletar' printer.serial %}">Deletar</a></td>
                 <!- Exibe as impressoras cadastradas no banco pelo serial -!>

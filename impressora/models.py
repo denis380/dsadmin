@@ -11,6 +11,7 @@ class Printer(models.Model):
     coluna = models.CharField(max_length=20)
     status = models.CharField(max_length=30)
 
+
     def __str__(self): # Exibe as impressoras pelo serial no banco de dados pelo django Admin.
         return self.serial
 
@@ -25,3 +26,4 @@ class Printer(models.Model):
 
 
 
+##

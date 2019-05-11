@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'impressora',
     'crispy_forms',
+    'import_export',
 ]
 
 MIDDLEWARE = [

@@ -1,4 +1,9 @@
 from django.contrib import admin
-from .models import Printer
+from .models import *
+from import_export.admin import ImportExportModelAdmin
 
-admin.site.register(Printer)
+#admin.site.register(Printer)
+@admin.register(Printer)
+
+class ViewAdmin(ImportExportModelAdmin):
+    pass
