@@ -25,5 +25,3 @@ class Printer(models.Model):
         super(Printer, self).save(force_insert, force_update)
 
 
-
-##
