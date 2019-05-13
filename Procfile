@@ -1,1 +1,1 @@
-web: gunicorn ds_manager.wsgi
+web: gunicorn ds_manager.wsgi --log-file -
