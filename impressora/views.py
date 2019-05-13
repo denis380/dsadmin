@@ -177,7 +177,6 @@ def buscaCont(ip):
 
     return cont
 
-
 @login_required
 def exportarCsv(request):# Exporta o .csv com as impressoras cadastradas no DB.
     printers = Printer.objects.all()
@@ -190,7 +189,6 @@ def exportarCsv(request):# Exporta o .csv com as impressoras cadastradas no DB.
         writer.writerow([obj.serial, obj.contador, obj.galpao, obj.coluna, obj.ip, obj.etiqueta])
 
     return response
-
 
 def homePrinters(request):
      return render(request, 'home_printers.html')
