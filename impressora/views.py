@@ -1,15 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import Impressora, Busca_Rede, Busca_Coluna, Upload_Csv
+from .forms import Impressora, Busca_Rede, Busca_Coluna
 from .models import Printer
 from bs4 import BeautifulSoup
 import requests
 from requests.exceptions import ConnectionError
 from django.contrib.auth.decorators import login_required
-from openpyxl import load_workbook
 import csv
-import pandas as pd
-import xlrd
 
 
 
