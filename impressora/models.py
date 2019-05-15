@@ -3,13 +3,13 @@ from django import forms
 
 class Printer(models.Model):
     serial = models.CharField(max_length=20, primary_key=True)
-    ip = models.GenericIPAddressField()
-    modelo = models.CharField(max_length=8)
-    contador = models.IntegerField()
+    ip = models.GenericIPAddressField(null=True)
+    modelo = models.CharField(max_length=8, null=True)
+    contador = models.IntegerField(null=True)
     etiqueta = models.CharField(max_length=15)
     galpao = models.CharField(max_length=4)
     coluna = models.CharField(max_length=20)
-    status = models.CharField(max_length=30)
+    status = models.CharField(max_length=30, null=True)
 
 
     def __str__(self): # Exibe as impressoras pelo serial no banco de dados pelo django Admin.

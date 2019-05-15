@@ -7,6 +7,7 @@ import requests
 from requests.exceptions import ConnectionError
 from django.contrib.auth.decorators import login_required
 import csv
+import lxml
 
 
 
